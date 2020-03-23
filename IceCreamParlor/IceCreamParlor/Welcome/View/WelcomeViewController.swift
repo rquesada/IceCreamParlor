@@ -32,6 +32,7 @@ class WelcomeViewController: UIViewController {
             .observeOn(MainScheduler.instance)
             .bind(to: collectionView.rx.items(cellIdentifier: "ProductCollectionViewCell", cellType: ProductCollectionViewCell.self)){ (row,product,cell) in
                 print("new cell")
+                cell.product = product
         }.disposed(by: disposable)
     }
 
