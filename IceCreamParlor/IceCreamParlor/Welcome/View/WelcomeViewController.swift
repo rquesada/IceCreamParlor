@@ -33,12 +33,7 @@ class WelcomeViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        if (segue.identifier == "receiptSegue") {
-            //Wire data
-            let testData = [CartItem(name: "Uno", price: "$1", count: 1),CartItem(name: "Dos", price: "$2.3", count: 1)]
-            let vc = segue.destination as? ReceiptViewController
-            vc?.viewModel.cart.onNext(testData)
-        }
+        
     }
     
     private func setupBindings(){
