@@ -10,9 +10,13 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    var viewModel = WelcomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        viewModel.getProducts()
     }
 
     @IBAction func goHandler(_ sender: Any) {

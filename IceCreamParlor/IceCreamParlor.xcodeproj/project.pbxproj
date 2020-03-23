@@ -17,6 +17,9 @@
 		76C1900B242955AF00611F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C19009242955AF00611F72 /* LaunchScreen.storyboard */; };
 		76C19016242955AF00611F72 /* IceCreamParlorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19015242955AF00611F72 /* IceCreamParlorTests.swift */; };
 		76E97621242959B100582029 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E97620242959B100582029 /* ReceiptViewController.swift */; };
+		76FB324124295BE100DC257E /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB324024295BE100DC257E /* WelcomeViewModel.swift */; };
+		76FB324424295D3800DC257E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB324324295D3800DC257E /* Network.swift */; };
+		76FB3247242960D900DC257E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB3246242960D900DC257E /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		76C19015242955AF00611F72 /* IceCreamParlorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamParlorTests.swift; sourceTree = "<group>"; };
 		76C19017242955AF00611F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E97620242959B100582029 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		76FB324024295BE100DC257E /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		76FB324324295D3800DC257E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		76FB3246242960D900DC257E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		91B33AA6A1817F752E9D8724 /* Pods-IceCreamParlor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlor.release.xcconfig"; path = "Target Support Files/Pods-IceCreamParlor/Pods-IceCreamParlor.release.xcconfig"; sourceTree = "<group>"; };
 		9CC7E6D804BD8701F968666D /* Pods-IceCreamParlor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlor.debug.xcconfig"; path = "Target Support Files/Pods-IceCreamParlor/Pods-IceCreamParlor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +110,7 @@
 		76C18FFD242955AE00611F72 /* IceCreamParlor */ = {
 			isa = PBXGroup;
 			children = (
+				76FB324224295D1900DC257E /* Helper */,
 				76E9761F2429594800582029 /* Receipt */,
 				76E9761E2429593000582029 /* Welcome */,
 				76C18FFE242955AE00611F72 /* AppDelegate.swift */,
@@ -128,6 +135,7 @@
 		76E9761E2429593000582029 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				76FB3245242960A200DC257E /* Model */,
 				76E97625242959FA00582029 /* ViewModel */,
 				76E97623242959BF00582029 /* View */,
 			);
@@ -169,8 +177,25 @@
 		76E97625242959FA00582029 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				76FB324024295BE100DC257E /* WelcomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76FB324224295D1900DC257E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				76FB324324295D3800DC257E /* Network.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		76FB3245242960A200DC257E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76FB3246242960D900DC257E /* Product.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9A377CAB4F6D5FEFB07BD580 /* Frameworks */ = {
@@ -351,9 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */,
+				76FB324124295BE100DC257E /* WelcomeViewModel.swift in Sources */,
+				76FB324424295D3800DC257E /* Network.swift in Sources */,
 				76E97621242959B100582029 /* ReceiptViewController.swift in Sources */,
 				76C18FFF242955AE00611F72 /* AppDelegate.swift in Sources */,
 				76C19001242955AE00611F72 /* SceneDelegate.swift in Sources */,
+				76FB3247242960D900DC257E /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
