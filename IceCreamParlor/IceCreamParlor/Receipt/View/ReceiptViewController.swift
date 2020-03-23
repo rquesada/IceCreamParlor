@@ -10,15 +10,22 @@ import UIKit
 
 class ReceiptViewController: UIViewController {
 
+    @IBOutlet weak var startBtn: UIButton!
+    var viewModel  = ReceiptViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-    @IBAction func backHandler(_ sender: Any) {
+    func setupUI(){
+        startBtn.layer.borderWidth = 2
+        startBtn.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    @IBAction func startHandler(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     
     /*
     // MARK: - Navigation

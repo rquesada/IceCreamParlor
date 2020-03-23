@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		398DFEECF37B5314573028D2 /* Pods_IceCreamParlor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F55E4AB42922B0C2EA7153 /* Pods_IceCreamParlor.framework */; };
 		700BC8652C081887940B4486 /* Pods_IceCreamParlorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431888E5486D2226CF7D4494 /* Pods_IceCreamParlorTests.framework */; };
+		76BBD2E724297B4400C6C190 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BBD2E624297B4400C6C190 /* ReceiptViewModel.swift */; };
+		76BBD2EA24297B7900C6C190 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BBD2E924297B7900C6C190 /* CartItem.swift */; };
 		76C18FFF242955AE00611F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C18FFE242955AE00611F72 /* AppDelegate.swift */; };
 		76C19001242955AE00611F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19000242955AE00611F72 /* SceneDelegate.swift */; };
 		76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19002242955AE00611F72 /* WelcomeViewController.swift */; };
@@ -40,6 +42,8 @@
 		3564310C466A76993464ED45 /* Pods-IceCreamParlorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlorTests.debug.xcconfig"; path = "Target Support Files/Pods-IceCreamParlorTests/Pods-IceCreamParlorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		431888E5486D2226CF7D4494 /* Pods_IceCreamParlorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamParlorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F55E4AB42922B0C2EA7153 /* Pods_IceCreamParlor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamParlor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76BBD2E624297B4400C6C190 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
+		76BBD2E924297B7900C6C190 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		76C18FFB242955AE00611F72 /* IceCreamParlor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamParlor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C18FFE242955AE00611F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C19000242955AE00611F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 				15593C5CFEEA694B5EA2AF1D /* Pods-IceCreamParlorTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		76BBD2E824297B6500C6C190 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76BBD2E924297B7900C6C190 /* CartItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		76C18FF2242955AE00611F72 = {
@@ -151,6 +163,7 @@
 		76E9761F2429594800582029 /* Receipt */ = {
 			isa = PBXGroup;
 			children = (
+				76BBD2E824297B6500C6C190 /* Model */,
 				76E97624242959F200582029 /* ViewModel */,
 				76E97622242959B600582029 /* View */,
 			);
@@ -178,6 +191,7 @@
 		76E97624242959F200582029 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				76BBD2E624297B4400C6C190 /* ReceiptViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -387,7 +401,9 @@
 			files = (
 				76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */,
 				76FB324D242974C900DC257E /* Extensions.swift in Sources */,
+				76BBD2EA24297B7900C6C190 /* CartItem.swift in Sources */,
 				76FB324124295BE100DC257E /* WelcomeViewModel.swift in Sources */,
+				76BBD2E724297B4400C6C190 /* ReceiptViewModel.swift in Sources */,
 				76FB324A24296F7300DC257E /* ProductCollectionViewCell.swift in Sources */,
 				76FB324424295D3800DC257E /* Network.swift in Sources */,
 				76E97621242959B100582029 /* ReceiptViewController.swift in Sources */,

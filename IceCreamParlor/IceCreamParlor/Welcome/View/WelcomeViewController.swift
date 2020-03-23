@@ -16,6 +16,8 @@ class WelcomeViewController: UIViewController {
     var viewModel = WelcomeViewModel()
     let disposable = DisposeBag()
     
+    @IBOutlet weak var orderBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -24,6 +26,19 @@ class WelcomeViewController: UIViewController {
         
         setupBindings()
         viewModel.getProducts()
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "receiptSegue") {
+            //Wire data
+            let testData = [CartItem(name: "Uno", price: "$1", count: 1),CartItem(name: "Dos", price: "$2.3", count: 1)]
+            let vc = segue.destination as? ReceiptViewController
+            vc?.viewModel.cart = testData
+        }
     }
     
     private func setupBindings(){
@@ -36,9 +51,8 @@ class WelcomeViewController: UIViewController {
         }.disposed(by: disposable)
     }
 
-    @IBAction func goHandler(_ sender: Any) {
+    @IBAction func orderHandler(_ sender: Any) {
         self.performSegue(withIdentifier: "receiptSegue", sender: nil)
     }
-    
 }
 
