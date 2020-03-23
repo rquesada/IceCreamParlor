@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,11 +11,12 @@
 		700BC8652C081887940B4486 /* Pods_IceCreamParlorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431888E5486D2226CF7D4494 /* Pods_IceCreamParlorTests.framework */; };
 		76C18FFF242955AE00611F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C18FFE242955AE00611F72 /* AppDelegate.swift */; };
 		76C19001242955AE00611F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19000242955AE00611F72 /* SceneDelegate.swift */; };
-		76C19003242955AE00611F72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19002242955AE00611F72 /* ViewController.swift */; };
+		76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19002242955AE00611F72 /* WelcomeViewController.swift */; };
 		76C19006242955AE00611F72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C19004242955AE00611F72 /* Main.storyboard */; };
 		76C19008242955AF00611F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C19007242955AF00611F72 /* Assets.xcassets */; };
 		76C1900B242955AF00611F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C19009242955AF00611F72 /* LaunchScreen.storyboard */; };
 		76C19016242955AF00611F72 /* IceCreamParlorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19015242955AF00611F72 /* IceCreamParlorTests.swift */; };
+		76E97621242959B100582029 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E97620242959B100582029 /* ReceiptViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 		76C18FFB242955AE00611F72 /* IceCreamParlor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamParlor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C18FFE242955AE00611F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C19000242955AE00611F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76C19002242955AE00611F72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76C19002242955AE00611F72 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		76C19005242955AE00611F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76C19007242955AF00611F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76C1900A242955AF00611F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		76C19011242955AF00611F72 /* IceCreamParlorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceCreamParlorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C19015242955AF00611F72 /* IceCreamParlorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamParlorTests.swift; sourceTree = "<group>"; };
 		76C19017242955AF00611F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E97620242959B100582029 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		91B33AA6A1817F752E9D8724 /* Pods-IceCreamParlor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlor.release.xcconfig"; path = "Target Support Files/Pods-IceCreamParlor/Pods-IceCreamParlor.release.xcconfig"; sourceTree = "<group>"; };
 		9CC7E6D804BD8701F968666D /* Pods-IceCreamParlor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlor.debug.xcconfig"; path = "Target Support Files/Pods-IceCreamParlor/Pods-IceCreamParlor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +78,6 @@
 				3564310C466A76993464ED45 /* Pods-IceCreamParlorTests.debug.xcconfig */,
 				15593C5CFEEA694B5EA2AF1D /* Pods-IceCreamParlorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,9 +104,10 @@
 		76C18FFD242955AE00611F72 /* IceCreamParlor */ = {
 			isa = PBXGroup;
 			children = (
+				76E9761F2429594800582029 /* Receipt */,
+				76E9761E2429593000582029 /* Welcome */,
 				76C18FFE242955AE00611F72 /* AppDelegate.swift */,
 				76C19000242955AE00611F72 /* SceneDelegate.swift */,
-				76C19002242955AE00611F72 /* ViewController.swift */,
 				76C19004242955AE00611F72 /* Main.storyboard */,
 				76C19007242955AF00611F72 /* Assets.xcassets */,
 				76C19009242955AF00611F72 /* LaunchScreen.storyboard */,
@@ -121,6 +123,54 @@
 				76C19017242955AF00611F72 /* Info.plist */,
 			);
 			path = IceCreamParlorTests;
+			sourceTree = "<group>";
+		};
+		76E9761E2429593000582029 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				76E97625242959FA00582029 /* ViewModel */,
+				76E97623242959BF00582029 /* View */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		76E9761F2429594800582029 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				76E97624242959F200582029 /* ViewModel */,
+				76E97622242959B600582029 /* View */,
+			);
+			path = Receipt;
+			sourceTree = "<group>";
+		};
+		76E97622242959B600582029 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76E97620242959B100582029 /* ReceiptViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76E97623242959BF00582029 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76C19002242955AE00611F72 /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76E97624242959F200582029 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76E97625242959FA00582029 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9A377CAB4F6D5FEFB07BD580 /* Frameworks */ = {
@@ -300,7 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C19003242955AE00611F72 /* ViewController.swift in Sources */,
+				76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */,
+				76E97621242959B100582029 /* ReceiptViewController.swift in Sources */,
 				76C18FFF242955AE00611F72 /* AppDelegate.swift in Sources */,
 				76C19001242955AE00611F72 /* SceneDelegate.swift in Sources */,
 			);
