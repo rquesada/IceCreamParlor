@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class WelcomeViewController: UIViewController {
 
@@ -18,15 +19,20 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: ProductCollectionViewCell.self))
+        
         setupBindings()
         viewModel.getProducts()
     }
     
     private func setupBindings(){
-        /*viewModel
+        viewModel
             .products
             .observeOn(MainScheduler.instance)
-            .bind(to:)*/
+            .bind(to: collectionView.rx.items(cellIdentifier: "ProductCollectionViewCell", cellType: ProductCollectionViewCell.self)){ (row,product,cell) in
+                print("new cell")
+        }.disposed(by: disposable)
     }
 
     @IBAction func goHandler(_ sender: Any) {
