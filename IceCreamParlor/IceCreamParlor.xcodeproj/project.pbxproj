@@ -20,6 +20,8 @@
 		76FB324124295BE100DC257E /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB324024295BE100DC257E /* WelcomeViewModel.swift */; };
 		76FB324424295D3800DC257E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB324324295D3800DC257E /* Network.swift */; };
 		76FB3247242960D900DC257E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB3246242960D900DC257E /* Product.swift */; };
+		76FB324A24296F7300DC257E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB324824296F7300DC257E /* ProductCollectionViewCell.swift */; };
+		76FB324B24296F7300DC257E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76FB324924296F7300DC257E /* ProductCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		76FB324024295BE100DC257E /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		76FB324324295D3800DC257E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		76FB3246242960D900DC257E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		76FB324824296F7300DC257E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		76FB324924296F7300DC257E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		91B33AA6A1817F752E9D8724 /* Pods-IceCreamParlor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlor.release.xcconfig"; path = "Target Support Files/Pods-IceCreamParlor/Pods-IceCreamParlor.release.xcconfig"; sourceTree = "<group>"; };
 		9CC7E6D804BD8701F968666D /* Pods-IceCreamParlor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamParlor.debug.xcconfig"; path = "Target Support Files/Pods-IceCreamParlor/Pods-IceCreamParlor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				76C19002242955AE00611F72 /* WelcomeViewController.swift */,
+				76FB324824296F7300DC257E /* ProductCollectionViewCell.swift */,
+				76FB324924296F7300DC257E /* ProductCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 			files = (
 				76C1900B242955AF00611F72 /* LaunchScreen.storyboard in Resources */,
 				76C19008242955AF00611F72 /* Assets.xcassets in Resources */,
+				76FB324B24296F7300DC257E /* ProductCollectionViewCell.xib in Resources */,
 				76C19006242955AE00611F72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +384,7 @@
 			files = (
 				76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */,
 				76FB324124295BE100DC257E /* WelcomeViewModel.swift in Sources */,
+				76FB324A24296F7300DC257E /* ProductCollectionViewCell.swift in Sources */,
 				76FB324424295D3800DC257E /* Network.swift in Sources */,
 				76E97621242959B100582029 /* ReceiptViewController.swift in Sources */,
 				76C18FFF242955AE00611F72 /* AppDelegate.swift in Sources */,
