@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RxSwift
+import  RxCocoa
 
 class ReceiptViewModel {
     var total:Double?
-    var cart = [CartItem]()
-
+    public var cart = PublishSubject<[CartItem]>()
 }

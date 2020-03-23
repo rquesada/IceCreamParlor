@@ -11,6 +11,8 @@
 		700BC8652C081887940B4486 /* Pods_IceCreamParlorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431888E5486D2226CF7D4494 /* Pods_IceCreamParlorTests.framework */; };
 		76BBD2E724297B4400C6C190 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BBD2E624297B4400C6C190 /* ReceiptViewModel.swift */; };
 		76BBD2EA24297B7900C6C190 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BBD2E924297B7900C6C190 /* CartItem.swift */; };
+		76BBD2ED24297FC100C6C190 /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BBD2EB24297FC100C6C190 /* ReceiptTableViewCell.swift */; };
+		76BBD2EE24297FC100C6C190 /* ReceiptTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BBD2EC24297FC100C6C190 /* ReceiptTableViewCell.xib */; };
 		76C18FFF242955AE00611F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C18FFE242955AE00611F72 /* AppDelegate.swift */; };
 		76C19001242955AE00611F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19000242955AE00611F72 /* SceneDelegate.swift */; };
 		76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C19002242955AE00611F72 /* WelcomeViewController.swift */; };
@@ -44,6 +46,8 @@
 		69F55E4AB42922B0C2EA7153 /* Pods_IceCreamParlor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamParlor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BBD2E624297B4400C6C190 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		76BBD2E924297B7900C6C190 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		76BBD2EB24297FC100C6C190 /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
+		76BBD2EC24297FC100C6C190 /* ReceiptTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptTableViewCell.xib; sourceTree = "<group>"; };
 		76C18FFB242955AE00611F72 /* IceCreamParlor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamParlor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C18FFE242955AE00611F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C19000242955AE00611F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				76E97620242959B100582029 /* ReceiptViewController.swift */,
+				76BBD2EB24297FC100C6C190 /* ReceiptTableViewCell.swift */,
+				76BBD2EC24297FC100C6C190 /* ReceiptTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			files = (
 				76C1900B242955AF00611F72 /* LaunchScreen.storyboard in Resources */,
 				76C19008242955AF00611F72 /* Assets.xcassets in Resources */,
+				76BBD2EE24297FC100C6C190 /* ReceiptTableViewCell.xib in Resources */,
 				76FB324B24296F7300DC257E /* ProductCollectionViewCell.xib in Resources */,
 				76C19006242955AE00611F72 /* Main.storyboard in Resources */,
 			);
@@ -399,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BBD2ED24297FC100C6C190 /* ReceiptTableViewCell.swift in Sources */,
 				76C19003242955AE00611F72 /* WelcomeViewController.swift in Sources */,
 				76FB324D242974C900DC257E /* Extensions.swift in Sources */,
 				76BBD2EA24297B7900C6C190 /* CartItem.swift in Sources */,

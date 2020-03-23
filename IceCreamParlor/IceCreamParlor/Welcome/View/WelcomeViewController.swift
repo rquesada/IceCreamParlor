@@ -37,7 +37,7 @@ class WelcomeViewController: UIViewController {
             //Wire data
             let testData = [CartItem(name: "Uno", price: "$1", count: 1),CartItem(name: "Dos", price: "$2.3", count: 1)]
             let vc = segue.destination as? ReceiptViewController
-            vc?.viewModel.cart = testData
+            vc?.viewModel.cart.onNext(testData)
         }
     }
     

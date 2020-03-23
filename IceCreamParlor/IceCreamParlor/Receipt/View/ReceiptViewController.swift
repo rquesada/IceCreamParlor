@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class ReceiptViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startBtn: UIButton!
     var viewModel  = ReceiptViewModel()
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBinding()
     }
     
     func setupUI(){
@@ -27,14 +33,14 @@ class ReceiptViewController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupBinding(){
+        tableView.register(UINib(nibName: "ReceiptTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: ReceiptTableViewCell.self))
+        viewModel
+            .cart
+            .observeOn(MainScheduler.instance)
+            .bind(to: tableView.rx.items(cellIdentifier: "ReceiptTableViewCell", cellType: ReceiptTableViewCell.self)) {  (row,cartItem,cell) in
+            cell.textLabel?.text = cartItem.name
+        }.disposed(by: disposeBag)
     }
-    */
 
 }
