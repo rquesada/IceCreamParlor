@@ -77,17 +77,39 @@
                             <constraint firstItem="ELd-xb-rcp" firstAttribute="leading" secondItem="Cro-u5-xqa" secondAttribute="leading" constant="15" id="zbh-7Z-0wd"/>
                         </constraints>
                     </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kb3-TE-aL1">
+                        <rect key="frame" x="132" y="0.0" width="20" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0de-c1-Bts">
+                                <rect key="frame" x="6" y="3" width="8" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0de-c1-Bts" firstAttribute="centerX" secondItem="kb3-TE-aL1" secondAttribute="centerX" id="1hI-6c-ctK"/>
+                            <constraint firstItem="0de-c1-Bts" firstAttribute="centerY" secondItem="kb3-TE-aL1" secondAttribute="centerY" id="Iwj-vJ-qgy"/>
+                            <constraint firstAttribute="height" constant="20" id="N3Z-Ow-AbY"/>
+                            <constraint firstAttribute="width" constant="20" id="iyK-iP-USY"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="Cro-u5-xqa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="1ls-HD-blL"/>
                 <constraint firstAttribute="trailing" secondItem="Cro-u5-xqa" secondAttribute="trailing" constant="10" id="CUk-ry-UVb"/>
                 <constraint firstItem="Cro-u5-xqa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Ffb-8r-9QE"/>
+                <constraint firstItem="kb3-TE-aL1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Iaj-wV-74f"/>
                 <constraint firstAttribute="bottom" secondItem="Cro-u5-xqa" secondAttribute="bottom" constant="10" id="PM1-vK-xrG"/>
+                <constraint firstAttribute="trailing" secondItem="kb3-TE-aL1" secondAttribute="trailing" id="tH4-LH-UE8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="152" height="213"/>
             <connections>
+                <outlet property="badgeContainer" destination="kb3-TE-aL1" id="EPF-yu-GFF"/>
+                <outlet property="badgeLabel" destination="0de-c1-Bts" id="YJI-gy-Vlf"/>
                 <outlet property="borderView" destination="Cro-u5-xqa" id="MZC-kk-mI6"/>
                 <outlet property="circleView" destination="ZBb-td-oZX" id="7Wo-zr-L2l"/>
                 <outlet property="imageView" destination="23U-0b-7cF" id="D2i-ga-210"/>

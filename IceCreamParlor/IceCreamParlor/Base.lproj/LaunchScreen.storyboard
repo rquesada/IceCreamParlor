@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="ZHD-6g-t9V">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sundae" translatesAutoresizingMaskIntoConstraints="NO" id="ZHD-6g-t9V">
                                 <rect key="frame" x="0.0" y="389" width="414" height="473"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="473" id="caU-HU-kTe"/>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash" width="816" height="1336"/>
+        <image name="sundae" width="816" height="1336"/>
     </resources>
 </document>

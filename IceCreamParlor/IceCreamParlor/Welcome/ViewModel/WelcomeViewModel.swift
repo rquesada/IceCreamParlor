@@ -10,12 +10,12 @@ import RxSwift
 
 class WelcomeViewModel {
     
+    public var cartModel = [CartItem]()
     public let products : PublishSubject<[Product]> = PublishSubject()
     
     func getProducts(){
         Network.requestData(url: Network.products, completion: { result in
             if let products = result{
-                print("count = \(products.count)")
                 self.products.onNext(products)
             }
         } )
