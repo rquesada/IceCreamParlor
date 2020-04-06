@@ -39,7 +39,7 @@ class ReceiptViewController: UIViewController {
             .cart
             .observeOn(MainScheduler.instance)
             .bind(to: tableView.rx.items(cellIdentifier: "ReceiptTableViewCell", cellType: ReceiptTableViewCell.self)) {  (row,cartItem,cell) in
-            cell.textLabel?.text = cartItem.name1
+            //cell.textLabel?.text = cartItem.name1
         }.disposed(by: disposeBag)
     }
 

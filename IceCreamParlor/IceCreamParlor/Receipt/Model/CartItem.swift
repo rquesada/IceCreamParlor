@@ -9,7 +9,7 @@
 import Foundation
 
 struct CartItem{
-    let name1, name2 , price :String
+    let name1, name2, price :String
     var count: Int
     
     init(name1:String, name2: String ,price:String, count:Int) {

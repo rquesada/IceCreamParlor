@@ -20,7 +20,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     public var product:Product!{
         didSet{
-            circleView.backgroundColor = UIColor(hex: "\(product.bg_color)FF")
+            circleView.backgroundColor = UIColor(hex: "\(product.bgColor)FF")
             imageView.image = UIImage(named: product.type)
             nameLabel.text = "\(product.name1) \(product.name2)"
             priceLabel.text = product.price

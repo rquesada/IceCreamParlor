@@ -8,6 +8,26 @@
 
 import Foundation
 
-struct Product: Codable{
-    let name1, name2, price, bg_color, type :String
+struct Product: Decodable{
+    let uuid, name1, name2, price, bgColor, type :String
+    
+    enum CodingKeys:String, CodingKey {
+        case name1 = "name1"
+        case name2
+        case price
+        case bgColor = "bg_color"
+        case type
+    }
+}
+
+extension Product {
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name1 = try values.decode(String.self, forKey: .name1)
+        name2 = try values.decode(String.self, forKey: .name2)
+        price = try values.decode(String.self, forKey: .price)
+        bgColor = try values.decode(String.self, forKey: .bgColor)
+        type = try values.decode(String.self, forKey: .type)
+        uuid = UUID().uuidString
+    }
 }
