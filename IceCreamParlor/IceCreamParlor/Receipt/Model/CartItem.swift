@@ -9,10 +9,11 @@
 import Foundation
 
 struct CartItem{
-    let name1, name2, price :String
+    let uuid, name1, name2, price :String
     var count: Int
     
-    init(name1:String, name2: String ,price:String, count:Int) {
+    init(uuid: String, name1:String, name2: String ,price:String, count:Int) {
+        self.uuid = uuid
         self.name1 = name1
         self.name2 = name2
         self.price = price

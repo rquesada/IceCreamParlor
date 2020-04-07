@@ -34,12 +34,9 @@ class WelcomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "receiptSegue") {
             //Wire data
-            
             let vc = segue.destination as? ReceiptViewController
-            //vc?.viewModel.cart.onNext(viewModel.cartModel)
+            vc?.viewModel.cart = viewModel.cartModel
         }
-        
-        
     }
     
     private func setupBindings(){
@@ -68,10 +65,10 @@ class WelcomeViewController: UIViewController {
     func touchCell(indexPath:IndexPath, model:Product){
         print("click in cell")
         
-        let productIndex = viewModel.cartModel.firstIndex(where: { $0.name1 == model.name1})
+        let productIndex = viewModel.cartModel.firstIndex(where: { $0.uuid == model.uuid})
         
         if productIndex == nil{
-            viewModel.cartModel.append(CartItem(name1: model.name1, name2: model.name2,  price: model.price, count: 1))
+            viewModel.cartModel.append(CartItem(uuid: model.uuid, name1: model.name1, name2: model.name2,  price: model.price, count: 1))
             self.setBadge(index: indexPath, count: 1)
         }else{
             guard let index = productIndex else{ return }

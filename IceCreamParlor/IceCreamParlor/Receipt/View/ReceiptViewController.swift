@@ -7,20 +7,17 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
 
-class ReceiptViewController: UIViewController {
-
+class ReceiptViewController: UIViewController, UITableViewDataSource {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startBtn: UIButton!
     var viewModel  = ReceiptViewModel()
-    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "ReceiptTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: ReceiptTableViewCell.self))
         setupUI()
-        setupBinding()
     }
     
     func setupUI(){
@@ -32,15 +29,16 @@ class ReceiptViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-    private func setupBinding(){
-        tableView.register(UINib(nibName: "ReceiptTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: ReceiptTableViewCell.self))
-        viewModel
-            .cart
-            .observeOn(MainScheduler.instance)
-            .bind(to: tableView.rx.items(cellIdentifier: "ReceiptTableViewCell", cellType: ReceiptTableViewCell.self)) {  (row,cartItem,cell) in
-            //cell.textLabel?.text = cartItem.name1
-        }.disposed(by: disposeBag)
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.cart.count
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptTableViewCell", for: indexPath) as! ReceiptTableViewCell
+        let item = viewModel.cart[indexPath.row]
+        cell.nameLbl.text = "\(item.name1) \(item.name2)"
+        cell.priceLabel.text = item.price
+        return cell
+    }
 }
